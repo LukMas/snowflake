@@ -23,15 +23,19 @@ enum CustomLayers {
 //,
 led_config_t g_led_config = { {
   // Key Matrix to LED Index
-   {   0, 1, 2,  6,  7,  8 }, 
-   {   3, 4, 5,  9, 10, 11 }
+   {  0,  1,  2}, 
+   {  8,  7,  6}, 
+   {  3,  4,  5},
+   { 11, 10,  9}
 }, {
   // LED Index to Physical Position
-   { 0, 0 },  { 45, 0 },  { 90, 0 },  { 134, 0 },  { 180, 0 },  { 224, 0 }, 
-   { 0, 64 }, { 45, 64 }, { 90, 64 }, { 134, 64 }, { 180, 64 }, { 224, 64 }
+   {   0,   0 },  {  45,  0 },  {  90,  0 }, \
+   {  90,  64 },  {  45, 64 },  {   0, 64 }, \
+   { 134,   0 },  { 180,  0 },  { 224,  0 }, \
+   { 224,  64 },  { 180, 64 },  { 134, 64 }
 }, {
   // LED Index to Flag
-   1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+   4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
 } };
 
 
@@ -40,7 +44,7 @@ uint8_t isDefaultLayer = _BASE;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       [_BASE] = LAYOUT( 
-               KC_Q,          KC_W,     KC_E,      KC_R,      KC_T,     KC_Y,\
-               KC_A,          KC_S,     KC_D,      KC_F,      KC_G,     KC_H  
+               KC_Q,      KC_W,     KC_E,          KC_R,      KC_T,     KC_Y,   \
+               KC_A,      KC_S,     KC_D,          KC_F,      KC_G,     KC_H    \
                       )
 };

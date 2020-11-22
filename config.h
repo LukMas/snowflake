@@ -31,8 +31,8 @@
 #define MASTER_RIGHT
 
 /* key matrix size */
-#define MATRIX_ROWS 2
-#define MATRIX_COLS 6
+#define MATRIX_ROWS 4
+#define MATRIX_COLS 3
 
 
 /*

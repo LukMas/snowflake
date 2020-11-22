@@ -19,15 +19,15 @@
 #include "quantum.h"
 // #include "rgblight.h"
 
-
 #define LAYOUT( \
                 k00, k01, k02,  k03, k04, k05,  \
                 k10, k11, k12,  k13, k14, k15   \
                ) \
             { \
-               { k00,    k01,   k02,    k03,   k04,   k05  },  \
-               { k10,    k11,   k12,    k13,   k14,   k15  }   \
+               { k00,   k01,   k02 }, \
+               { k10,   k11,   k12 }, \
+               { k05,   k04,   k03 }, \
+               { k15,   k14,   k13 }  \
             }
-
 #endif
 

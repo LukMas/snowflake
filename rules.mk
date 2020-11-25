@@ -57,8 +57,8 @@ OLED_DRIVER_ENABLE = yes
 #
 LEADER_ENABLE = no
 TAP_DANCE_ENABLE = no
-RGBLIGHT_ENABLE = no
-RGB_MATRIX_ENABLE = WS2812
+RGBLIGHT_ENABLE = yes
+#RGB_MATRIX_ENABLE = WS2812
 BOOTMAGIC_ENABLE = no      # Virtual DIP switch configuration(+1000)
 MOUSEKEY_ENABLE = yes       # Mouse keys(+4700)
 EXTRAKEY_ENABLE = yes       # Audio control and System control(+450)

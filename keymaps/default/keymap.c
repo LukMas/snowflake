@@ -17,34 +17,43 @@
 #include "config.h"
 
 enum CustomLayers {
-      _BASE = 0
+    _BASE = 0, 
+    _FUNC
 };
 
-//,
-led_config_t g_led_config = { {
-  // Key Matrix to LED Index
+/*
+led_config_t g_led_config = { { // Key Matrix to LED Index
    {  0,  1,  2}, 
-   {  8,  7,  6}, 
-   {  3,  4,  5},
+   {  3,  4,  5}, 
+   {  8,  7,  6},
    { 11, 10,  9}
 }, {
   // LED Index to Physical Position
-   {   0,   0 },  {  45,  0 },  {  90,  0 }, \
-   {  90,  64 },  {  45, 64 },  {   0, 64 }, \
    { 134,   0 },  { 180,  0 },  { 224,  0 }, \
-   { 224,  64 },  { 180, 64 },  { 134, 64 }
+   { 134,  64 },  { 180, 64 },  { 224, 64 }, \
+   {   0,   0 },  {  45,  0 },  {  90,  0 }, \
+   {   0,  64 },  {  45, 64 },  {  90, 64 }
 }, {
   // LED Index to Flag
    4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4
 } };
-
+*/
 
 uint8_t isDefaultLayer = _BASE;
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-      [_BASE] = LAYOUT( 
-               KC_Q,      KC_W,     KC_E,          KC_R,      KC_T,     KC_Y,   \
-               KC_A,      KC_S,     KC_D,          KC_F,      KC_G,     KC_H    \
-                      )
+    [_BASE] = LAYOUT( 
+         RGB_TOG,      KC_W,     KC_E,          KC_R,      KC_T,     RGB_MOD,   \
+            KC_A,      KC_S,     KC_D,          KC_F,      KC_G,     KC_H    \
+        ),
+    [_FUNC] = LAYOUT( 
+            KC_Q,      KC_W,     KC_E,          KC_R,      KC_T,     KC_Y,   \
+            KC_A,      KC_S,     KC_D,          KC_F,      KC_G,     KC_H    \
+        )
 };
+
+void matrix_init_user(void) {
+    /* rgb_matrix_config.mode = RGB_MATRIX_TYPING_HEATMAP; */
+ //   rgblight_mode(RGB_MATRIX_TYPING_HEATMAP);
+}
